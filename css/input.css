@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@source "../dist/*.{html,js}";
 @theme {
     --font-nothingyoucoulddo: "Nothing You Could Do", "cursive";
     --font-signika: "Signika", "sans-serif";

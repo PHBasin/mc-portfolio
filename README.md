@@ -3,7 +3,7 @@
 <div align="center">
 
   <a href="https://github.com/PHBasin/mc-portfolio">
-    <img src="dist/assets/logo.png" alt="logo" width="80" height="80">
+    <img src="img/logo.png" alt="logo" width="80" height="80">
   </a>
   <h3 align="center">Maxime Colin Portfolio</h3>
   <p align="center">
