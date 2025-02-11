@@ -57,6 +57,8 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --font-nothingyoucoulddo: "Nothing You Could Do", "cursive";
+    --font-signika: "Signika", "sans-serif";
   }
 }
 @layer base {
@@ -513,8 +515,14 @@
   .text-center {
     text-align: center;
   }
+  .font-nothingyoucoulddo {
+    font-family: var(--font-nothingyoucoulddo);
+  }
   .font-serif {
     font-family: var(--font-serif);
+  }
+  .font-signika {
+    font-family: var(--font-signika);
   }
   .text-2xl {
     font-size: var(--text-2xl);
