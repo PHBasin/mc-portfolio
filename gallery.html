@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maxime Colin - Gallery</title>
+    <meta name="description" content="Portfolio Gallery">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="dist/output.css" />
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="src/js/layout.js"></script>
+    <script src="src/js/categories.js"></script>
+    <script src="src/js/gallery_images.js"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Fancybox -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+</head>
+
+<body
+    class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500"
+    x-data="portfolio">
+
+    <!-- Navbar -->
+    <header class="flex w-full overflow-hidden pt-10 pb-1" x-data x-html="window.headerHTML"></header>
+
+    <!-- Content -->
+    <div class="container mx-auto">
+
+        <!-- Header -->
+        <div class="pt-10 pb-8 flex flex-col items-start gap-6">
+            <!-- Back Button -->
+            <a href="index.html"
+                class="group flex items-center gap-2 text-neutral-500 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor"
+                    class="w-5 h-5 transform group-hover:-translate-x-1 transition-transform duration-300">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                </svg>
+                <span class="text-lg font-medium">Retour</span>
+            </a>
+
+            <!-- Title -->
+            <h1 class="text-4xl font-bold font-signika"
+                x-text="categories.find(c => c.id === catId)?.title || 'Catégorie introuvable'"></h1>
+
+            <div class="text-lg text-gray-600 dark:text-gray-300 font-medium space-y-6">
+                <template
+                    x-for="paragraph in [].concat(categories.find(c => c.id === catId)?.description || 'Description introuvable')">
+                    <p x-text="paragraph"></p>
+                </template>
+            </div>
+        </div>
+
+        <!-- Gallery Grid (Masonry Placeholder) -->
+        <!-- Use x-show on the whole section if category exists -->
+        <section class="text-neutral-700" x-show="category">
+            <div class="container w-full">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                    x-data="{ images: (window.galleryImages && window.galleryImages[catId]) || [] }">
+                    <template x-for="image in images" :key="image">
+                        <div class="overflow-hidden relative group">
+                            <a :href="'assets/gallery/' + catId + '/' + image" data-fancybox="gallery"
+                                class="block w-full h-full relative">
+                                <img :src="'assets/gallery/' + catId + '/' + image" alt="Gallery Image"
+                                    class="block w-full h-full object-cover transform transition duration-500 group-hover:scale-110 opacity-0 animate-fade-in"
+                                    loading="lazy" />
+                            </a>
+                        </div>
+                    </template>
+                </div>
+
+                <div class="text-center py-20 text-gray-500" x-show="!categories.find(c => c.id === catId)">Catégorie
+                    introuvable</div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer x-data x-html="window.footerHTML"></footer>
+    <script>
+        Fancybox.bind("[data-fancybox]", {});
+    </script>
+    <script src="src/js/fade_in.js"></script>
+</body>
+
+</html>

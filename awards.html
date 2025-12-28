@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maxime Colin - Palmarès</title>
+    <meta name="description" content="Award winning photographs by Maxime Colin.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="dist/output.css" />
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="src/js/layout.js"></script>
+    <script src="src/js/awards.js"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Fancybox -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+</head>
+
+<body
+    class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
+
+    <!-- Navbar -->
+    <header class="flex w-full overflow-hidden pt-10 pb-1" x-data x-html="window.headerHTML"></header>
+
+    <!-- Content -->
+    <div class="container mx-auto pb-20">
+        <h1 class="text-4xl pt-10 pb-8 font-bold font-signika">PALMARES</h1>
+
+        <div x-data="awards" class="flex flex-col gap-8">
+            <template x-for="(award, index) in awardsList" :key="index">
+                <div class="flex flex-col items-center">
+                    <a :href="award.src" data-fancybox="awards" :data-caption="award.caption"
+                        class="block w-full max-w-4xl shadow-lg hover:opacity-95 transition">
+                        <img :src="award.src" :alt="award.caption" class="w-full h-auto object-cover"
+                            :loading="index < 2 ? 'eager' : 'lazy'">
+                    </a>
+                    <p class="block mt-2 font-medium text-center" x-text="award.caption">
+                    </p>
+                </div>
+            </template>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer x-data x-html="window.footerHTML"></footer>
+
+    <script>
+        Fancybox.bind("[data-fancybox]", {});
+    </script>
+    <script src="src/js/fade_in.js"></script>
+</body>
+
+</html>

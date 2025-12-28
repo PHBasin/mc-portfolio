@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maxime Colin - À propos</title>
+    <meta name="description"
+        content="Hello there, I'm Maxime Colin - an intrepid explorer through the lens, on a relentless quest to capture the world's boundless wonders. Join me in unraveling the extraordinary through my lens as I embark on a visual journey like no other.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="dist/output.css" />
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="src/js/layout.js"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body
+    class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
+
+    <!-- Navbar -->
+    <header class="flex w-full overflow-hidden pt-10 pb-1" x-data x-html="window.headerHTML"></header>
+
+    <!-- Content -->
+    <div class="container mx-auto">
+        <h1 class="text-4xl pt-10 pb-8 font-bold font-signika">A PROPOS</h1>
+        <div class="grid grid-cols-2 gap-14 md:gap-20">
+            <div class="col-span-2 md:col-span-1">
+                <div
+                    class="bg-white dark:bg-neutral-900 p-5 pb-28 m-6 md:m-12 shadow-lg border border-gray-100 dark:border-neutral-800 hover:rotate-0 transition duration-500 -rotate-6 relative">
+                    <img src="./assets/avatar.webp" alt=""
+                        class="smooth-edges flex flex-col w-full aspect-square object-cover h-auto opacity-0 transition duration-500"
+                        loading="lazy" />
+                    <div class="absolute bottom-0 left-0 right-0 text-center">
+                        <p class="text-gray-800 dark:text-slate-200 pb-7 h-full text-6xl font-nothingyoucoulddo">me</p>
+                    </div>
+                </div>
+
+            </div>
+            <section class="font-normal text-center text-base md:text-start mx-3 col-span-2 md:col-span-1 my-auto">
+                <div class="block md:hidden">
+                    <p class="text-3xl font-serif font-bold mb-1">Salut,</p>
+                    <p class="text-3xl font-serif font-bold mb-6">moi c'est Maxime<span class="animate-wave">👋</span>
+                    </p>
+                </div>
+                <p class="hidden md:block text-3xl font-serif font-bold mb-6">Salut, moi c'est Maxime
+                    <span class="animate-wave">👋</span>
+                </p>
+                <p class="mb-4 text-lg font-medium">
+                    Âgé de 19 ans et étudiant en école d'ingénieur, je cultive une passion profonde pour la nature.
+                    Originaire de la Vallée de Chevreuse, véritable écrin de biodiversité, j'ai grandi au contact d'une
+                    faune et d'une flore exceptionnelles.
+                </p>
+                <p class="mb-4 text-lg font-medium">
+                    Poursuivant désormais mes études à Nancy, je continue mon exploration au cœur d'une campagne sauvage
+                    et vibrante, qui offre ses trésors à ceux qui savent prendre le temps de l'observation.
+                </p>
+                <p class="mb-4 text-lg font-medium">
+                    Ma vocation pour la photographie animalière est née lors d'un voyage marquant en Afrique du Sud.
+                    Depuis, mon objectif est clair : capturer et partager la beauté du monde sauvage pour sensibiliser
+                    le plus grand nombre à sa fragilité et à l'urgence de le préserver.
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer x-data x-html="window.footerHTML"></footer>
+    <script src="src/js/fade_in.js"></script>
+</body>
+
+</html>
