@@ -6,11 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maxime Colin - Palmarès</title>
-    <meta name="description" content="Award winning photographs by Maxime Colin.">
+    <meta name="description"
+        content="Mes photographies primées et distinctions dans les concours de photographie animalière.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link rel="stylesheet" href="dist/output.css" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maxime-colin.com/awards.html">
+    <meta property="og:title" content="Palmarès - Maxime Colin">
+    <meta property="og:description" content="Mes photos primées et distinctions.">
+    <meta property="og:image" content="https://maxime-colin.com/assets/gallery/voisins-originaux/cover.webp">
 
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -45,7 +53,7 @@
                         <img :src="award.src" :alt="award.caption" class="w-full h-auto object-cover"
                             :loading="index < 2 ? 'eager' : 'lazy'">
                     </a>
-                    <p class="block mt-2 font-medium text-center" x-text="award.caption">
+                    <p class="block mt-2 text-lg font-medium text-center" x-text="award.caption">
                     </p>
                 </div>
             </template>
