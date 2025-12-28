@@ -47,9 +47,7 @@ const footerHTML = `
     <div class="grid grid-cols-1 gap-8 text-center mx-auto">
         <div>
             <p class="font-signika"><b>MAXIME</b></p>
-            <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">
-                929 Sycamore Street San Francisco CA<br />(415) 208- 2116
-            </p>
+            <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">54000 Nancy FR</p>
             <div class="flex mx-auto">
                 <div class="mx-auto space-x-6 flex mt-8 text-gray-600 dark:text-gray-300">
                     <a class="transition duration-300 hover:opacity-75" href="https://www.facebook.com" target="_blank" rel="noreferrer">

@@ -35,7 +35,7 @@
     <header class="flex w-full overflow-hidden pt-10 pb-1" x-data x-html="window.headerHTML"></header>
     <!-- Content -->
     <div class="container mx-auto">
-        <h1 class="text-4xl pt-10 pb-8 font-bold font-signika">PORTFOLIO</h1>
+        <h1 class="text-4xl pt-10 pb-8 font-bold">PORTFOLIO</h1>
         <section class="text-neutral-700" x-data="portfolio">
             <div class="container w-full">
                 <!-- Category Grid -->
@@ -52,7 +52,7 @@
                             <!-- Overlay (Desktop: hover, Mobile: permanent gradient) -->
                             <div
                                 class="absolute inset-0 bg-black/60 transition duration-300 md:opacity-0 md:group-hover:opacity-100 flex items-center justify-center">
-                                <h3 class="text-white text-xl md:text-2xl font-bold font-signika text-center px-4 drop-shadow-md"
+                                <h3 class="text-white text-xl md:text-2xl font-bold text-center px-4 drop-shadow-md"
                                     x-text="category.title"></h3>
                             </div>
 
@@ -61,7 +61,7 @@
                                 class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/80 to-transparent md:hidden pointer-events-none">
                             </div>
                             <div class="absolute bottom-4 left-0 w-full text-center md:hidden">
-                                <h3 class="text-white text-xl font-bold font-signika px-4" x-text="category.title"></h3>
+                                <h3 class="text-white text-xl font-bold px-4" x-text="category.title"></h3>
                             </div>
                         </a>
                     </template>
