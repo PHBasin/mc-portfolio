@@ -10,13 +10,12 @@ A high-performance static portfolio built for speed and simplicity.
 
 ## 🚀 Features
 
-*   **⚡️ Static Power:** Fully static architecture. Zero backend. Deploys anywhere (`GitHub Pages`, `Netlify`, `S3`).
+*   **⚡️ Static Power:** Fully static architecture. Zero backend. Deploys anywhere (`GitHub Pages`, `AWS S3`).
 *   **🧩 Modular Design:** Header/Footer injected dynamically via **Alpine.js**. No copy-pasting HTML.
 *   **📂 Centralized Data:**
     *   `categories.js` →  Gallery Content
     *   `gallery_images.js` → Auto-generated Manifest
     *   `awards.js` → Awards List
-*   **🎨 Asset Workflow:** Automated scripts to **clean** filenames and **convert** to WebP.
 
 ---
 
@@ -24,7 +23,7 @@ A high-performance static portfolio built for speed and simplicity.
 
 ```mermaid
 graph TD
-    A[Assets Folder] -->|Scan & Clean| B(Scripts)
+    B(Scripts) -->|Scan| A[Assets Folder]
     B -->|Generate| C[gallery_images.js]
     C -->|Load| D[Gallery Page]
     E[Categories.js] -->|Define| F[Index & Navigation]
@@ -36,18 +35,17 @@ graph TD
 ```plaintext
 📦 mc-portfolio
  ┣ 📂 assets
- ┃ ┣ 📂 gallery      # Categories (e.g., /tabarnak/, /rer-nard/)
- ┃ ┗ 📂 awards       # Trophy images
+ ┃ ┣ 📂 gallery                        # Categories
+ ┃ ┗ 📂 awards                         # Trophy images
  ┣ 📂 scripts
- ┃ ┣ 📜 clean-filenames.js          # 🧹 Removes accents, spaces, junk
- ┃ ┣ 📜 generate-gallery-manifest.js # ⚙️ Scans folder -> Updates JS
+ ┃ ┣ 📜 generate-gallery-manifest.js   # Scans folder -> Updates JS
  ┣ 📂 src
  ┃ ┣ 📂 js
- ┃ ┃ ┣ 📜 categories.js       # 📚 The "Database"
- ┃ ┃ ┣ 📜 gallery_images.js   # 🖼 Generated File List
- ┃ ┃ ┗ 📜 layout.js           # 🧱 Shared Components
- ┃ ┗ 📜 input.css             # 🎨 Tailwind Source
- ┗ 📜 *.html                  # Static Pages
+ ┃ ┃ ┣ 📜 categories.js                # The "Database"
+ ┃ ┃ ┣ 📜 gallery_images.js            # Generated file list
+ ┃ ┃ ┗ 📜 layout.js                    # Shared components (header & footer)
+ ┃ ┗ 📜 input.css                      # Tailwind Source
+ ┗ 📜 *.html                           # Static Pages
 ```
 
 ---
@@ -64,14 +62,10 @@ npm install
 npm run watch:css
 ```
 
-### 3️⃣ Managing Photos 📸
+### 3️⃣ Update the website manifest
 Added new photos to `assets/gallery/`? Just Run:
 
 ```bash
-# 🧹 Clean naming (No spaces, accents, copies)
-node scripts/clean-filenames.js
-
-# 🔄 Update the website manifest
 node scripts/generate-gallery-manifest.js
 ```
 
@@ -84,10 +78,3 @@ The project auto-deploys to **GitHub Pages** 🌐.
 | Workflow | Trigger | Source |
 | :--- | :--- | :--- |
 | `.github/workflows/deploy.yml` | `git push origin main` | Root Directory (`.`) |
-
----
-
-## ✍️ Credits
-
-*   **Photography:** Maxime Colin
-*   **Development:** Antigravity
