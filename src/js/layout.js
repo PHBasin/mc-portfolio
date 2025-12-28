@@ -43,7 +43,7 @@ const headerHTML = `
 `;
 
 const footerHTML = `
-<div class="max-w-screen-xl py-16 mx-auto">
+<div class="max-w-screen-xl py-8 md:py-16 mx-auto">
     <div class="grid grid-cols-1 gap-8 text-center mx-auto">
         <div>
             <p class="font-signika"><b>MAXIME</b></p>
