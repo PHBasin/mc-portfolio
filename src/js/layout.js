@@ -14,7 +14,7 @@ const headerHTML = `
                 </div>
             </button>
         </div>
-        <div id="menu" class="w-full transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center" :class="{ 'h-32': open, 'h-0': !open }">
+        <div id="menu" class="w-full transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center" :class="{ 'h-40': open, 'h-0': !open }">
             <ul id="ulMenu" class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
                 <li class="group transition duration-300">
                     <a href="index.html" class="font-signika text-2xl tap-highlight-transparent">PORTFOLIO
