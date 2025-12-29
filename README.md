@@ -71,6 +71,17 @@ Added new photos to `assets/gallery/`? Just Run:
 node scripts/generate-gallery-manifest.js
 ```
 
+### 4️⃣ Clean Filenames (Optional)
+To remove unwanted patterns (`_copy`, `(1)`, `_DxO`) from image names:
+
+```bash
+# Default (cleans assets/awards)
+node scripts/clean-filenames.js
+
+# Specific folder
+node scripts/clean-filenames.js assets/gallery/terre-est
+```
+
 ---
 
 ## 🚀 Deployment

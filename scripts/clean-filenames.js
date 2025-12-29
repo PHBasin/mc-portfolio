@@ -1,7 +1,16 @@
 const fs = require('fs');
 const path = require('path');
 
-const directory = path.join(__dirname, '../assets/awards');
+const targetArg = process.argv[2];
+// Use provided path or default to assets/gallery relative to this script
+const directory = targetArg
+    ? path.resolve(targetArg)
+    : path.join(__dirname, '../assets/awards');
+
+if (!targetArg) {
+    console.log("Usage: node scripts/clean-filenames.js <directory_path>");
+    console.log("No path provided, defaulting to: " + directory);
+}
 
 function cleanFilename(filename) {
     let name = filename;
@@ -10,11 +19,11 @@ function cleanFilename(filename) {
 
     // Liste des motifs à supprimer
     const patterns = [
-        /_copie/gi,           // _copie
-        /_copy/gi,            // _copy
-        /\s*-\s*copie/gi,     // - copie
-        /\s*-\s*copy/gi,      // - Copy
-        /\s*\(\d+\)/g,        // (1), (2), etc.
+        /_copie/gi,
+        /_copy/gi,
+        /\s*-\s*copie/gi,
+        /\s*-\s*copy/gi,
+        /\s*\(\d+\)/g,
         /-crop-final/gi,
         /-final/gi,
         /-Récupéré/gi,
@@ -22,7 +31,7 @@ function cleanFilename(filename) {
         /-version2/gi,
         /-vers2vert/gi,
         /-vers2/gi,
-        /_1/g,                // _1
+        /_1/g,
         /_DxOfinal/gi,
         /_DxO/gi,
         /traitee/gi
