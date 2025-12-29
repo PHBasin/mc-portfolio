@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maxime Colin - Boutique</title>
+    <meta name="description" content="Achetez des calendriers et des tirages photos.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maxime-colin.com/shop.html">
+    <meta property="og:title" content="Boutique - Maxime Colin">
+    <meta property="og:description" content="Achetez des calendriers et des tirages photos.">
+    <meta property="og:image" content="https://phbasin.github.io/mc-portfolio/assets/gallery/vase-cou/cover.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="dist/output.css" />
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="src/js/layout.js"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body
+    class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
+
+    <!-- Navbar -->
+    <header class="flex w-full overflow-hidden pt-10 pb-1" x-data x-html="window.headerHTML"></header>
+
+    <!-- Content -->
+    <div class="container mx-auto pb-10">
+        <h1 class="text-4xl pt-10 pb-8 font-bold">BOUTIQUE</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-14">
+
+            <!-- Calendars Card -->
+            <a href="shop/calendars.html"
+                class="group block relative overflow-hidden shadow-lg aspect-[4/3] bg-gray-100 dark:bg-neutral-900">
+
+                <!-- Placeholder / Background Image -->
+                <div
+                    class="absolute inset-0 bg-neutral-300 dark:bg-neutral-800 flex items-center justify-center group-hover:scale-105 transition duration-700">
+                    <span class="text-6xl">📅</span>
+                </div>
+                <div
+                    class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition duration-300 flex items-center justify-center">
+                    <h2
+                        class="text-white text-3xl font-bold font-signika tracking-wide border-2 border-white px-6 py-2">
+                        CALENDRIERS</h2>
+                </div>
+            </a>
+
+            <!-- Prints Card -->
+            <a href="shop/prints.html"
+                class="group block relative overflow-hidden shadow-lg aspect-[4/3] bg-gray-100 dark:bg-neutral-900">
+                <!-- Placeholder / Background Image -->
+                <div
+                    class="absolute inset-0 bg-neutral-300 dark:bg-neutral-800 flex items-center justify-center group-hover:scale-105 transition duration-700">
+                    <span class="text-6xl">🖼️</span>
+                </div>
+                <div
+                    class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition duration-300 flex items-center justify-center">
+                    <h2
+                        class="text-white text-3xl font-bold font-signika tracking-wide border-2 border-white px-6 py-2">
+                        TIRAGES PHOTOS</h2>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <footer x-data x-html="window.footerHTML"></footer>
+    <script src="src/js/fade_in.js"></script>
+</body>
+
+</html>

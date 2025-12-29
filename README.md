@@ -40,11 +40,12 @@ graph TD
  ┃ ┣ 📂 gallery                        # Categories
  ┃ ┗ 📂 awards                         # Trophy images
  ┣ 📂 scripts
- ┃ ┣ 📜 generate-gallery-manifest.js   # Scans folder -> Updates JS
+ ┃ ┣ 📜 generate-manifests.js          # Scans folder -> Updates JS
  ┣ 📂 src
  ┃ ┣ 📂 js
  ┃ ┃ ┣ 📜 categories.js                # The "Database"
- ┃ ┃ ┣ 📜 gallery_images.js            # Generated file list
+ ┃ ┃ ┣ 📜 gallery_images.js            # Generated gallery file list
+ ┃ ┃ ┣ 📜 slider_images.js             # Generated slider file list
  ┃ ┃ ┗ 📜 layout.js                    # Shared components (header & footer)
  ┃ ┗ 📜 input.css                      # Tailwind Source
  ┗ 📜 *.html                           # Static Pages
@@ -68,7 +69,7 @@ npm run watch:css
 Added new photos to `assets/gallery/`? Just Run:
 
 ```bash
-node scripts/generate-gallery-manifest.js
+node scripts/generate-manifests.js
 ```
 
 ### 4️⃣ Clean Filenames (Optional)

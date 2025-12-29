@@ -21,6 +21,7 @@ function cleanFilename(filename) {
     const patterns = [
         /_copie/gi,
         /_copy/gi,
+        /vers2/gi,
         /\s*-\s*copie/gi,
         /\s*-\s*copy/gi,
         /\s*\(\d+\)/g,

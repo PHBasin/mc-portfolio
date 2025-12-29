@@ -5,75 +5,125 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maxime Colin - Portfolio</title>
+    <title>Maxime Colin - Photographe Animalier</title>
     <meta name="description" content="Maxime Colin - Photographe animalier passionné par la nature.">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
     <link rel="stylesheet" href="dist/output.css" />
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://maxime-colin.com/">
-    <meta property="og:title" content="Maxime Colin - Portfolio">
-    <meta property="og:description" content="Explorez le monde sauvage à travers mon objectif.">
+    <meta property="og:title" content="Maxime Colin - Photographe Animalier">
+    <meta property="og:description" content="Maxime Colin - Photographe animalier passionné par la nature.">
     <meta property="og:image" content="https://phbasin.github.io/mc-portfolio/assets/gallery/vase-cou/cover.webp">
 
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="src/js/layout.js"></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Fancybox -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="src/js/layout.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body
     class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
+
     <!-- Navbar -->
     <header class="flex w-full overflow-hidden pt-10 pb-1" x-data x-html="window.headerHTML"></header>
-    <!-- Content -->
-    <div class="container mx-auto">
-        <h1 class="text-4xl pt-10 pb-8 font-bold">PORTFOLIO</h1>
-        <section class="text-neutral-700" x-data="portfolio">
-            <div class="container w-full">
-                <!-- Category Grid -->
-                <!-- Desktop: 3 cols, Tablet: 2 cols, Mobile: 1 col -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-10">
-                    <template x-for="category in categories" :key="category.id">
-                        <a :href="'gallery.html?id=' + category.id"
-                            class="group block relative overflow-hidden shadow-lg aspect-[4/3] bg-gray-100 dark:bg-neutral-900">
-                            <!-- Cover Image -->
-                            <img :src="category.cover" :alt="category.title"
-                                class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110 opacity-0 animate-fade-in"
-                                loading="lazy">
 
-                            <!-- Overlay (Mobile: Permanent, Desktop: Hover) -->
-                            <div
-                                class="absolute inset-0 bg-black/60 transition duration-300 flex opacity-100 md:opacity-0 md:group-hover:opacity-100 items-center justify-center">
-                                <h3 class="text-white text-xl md:text-2xl font-bold text-center px-4 drop-shadow-md"
-                                    x-text="category.title"></h3>
-                            </div>
-                        </a>
-                    </template>
+    <!-- Content -->
+    <div class="container mx-auto pb-10">
+        <h1 class="text-4xl pt-10 pb-8 font-bold">MAXIME COLIN</h1>
+
+        <!-- Fullscreen Slider -->
+        <div class="relative w-full aspect-video overflow-hidden" x-data="slider()">
+            <template x-for="(slide, index) in slides" :key="index">
+                <div class="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out"
+                    :class="currentSlide === index ? 'opacity-100' : 'opacity-0'">
+                    <img :src="slide.img" :alt="slide.alt" class="w-full h-full object-cover">
+
+                    <!-- Optional Caption Overlay -->
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/70 to-transparent text-white opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <p x-text="slide.caption" class="text-xl font-signika font-bold tracking-wide"></p>
+                    </div>
                 </div>
+            </template>
+
+            <!-- Controls (Arrows) -->
+            <button @click="prev()"
+                class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-3 rounded-full transition focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+            <button @click="next()"
+                class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-3 rounded-full transition focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+
+            <!-- Indicators (Dots) -->
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <template x-for="(slide, index) in slides" :key="index">
+                    <button @click="currentSlide = index; resetTimer()"
+                        class="w-3 h-3 rounded-full transition-all duration-300"
+                        :class="currentSlide === index ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/80'">
+                    </button>
+                </template>
             </div>
-        </section>
+        </div>
     </div>
+
     <!-- Footer -->
     <footer x-data x-html="window.footerHTML"></footer>
-    <script>
-        Fancybox.bind("[data-fancybox]", {});
-    </script>
-    <script src="src/js/categories.js"></script>
     <script src="src/js/fade_in.js"></script>
+    <!-- Load Slider Images Manifest -->
+    <script src="src/js/slider_images.js"></script>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('slider', () => ({
+                currentSlide: 0,
+                interval: null,
+                // Load images dynamically from the global variable definition or fallback to empty
+                slides: (window.sliderImages || []).map((filename, index) => ({
+                    img: `assets/slider/${filename}`,
+                    alt: `Photo ${index + 1}`,
+                    caption: `Description de la photo ${index + 1}`
+                })),
+                init() {
+                    if (this.slides.length > 0) {
+                        this.startTimer();
+                    }
+                },
+                next() {
+                    this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+                    this.resetTimer();
+                },
+                prev() {
+                    this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+                    this.resetTimer();
+                },
+                startTimer() {
+                    this.interval = setInterval(() => {
+                        this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+                    }, 5000); // Change slide every 5 seconds
+                },
+                resetTimer() {
+                    clearInterval(this.interval);
+                    this.startTimer();
+                }
+            }));
+        });
+    </script>
 </body>
 
 </html>

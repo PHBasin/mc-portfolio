@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maxime Colin - Portfolio</title>
+    <meta name="description"
+        content="Découvrez les galeries photos de Maxime Colin. Plongez dans la vie sauvage à travers différentes thématiques.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="dist/output.css" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maxime-colin.com/">
+    <meta property="og:title" content="Portfolio - Maxime Colin">
+    <meta property="og:description"
+        content="Découvrez les galeries photos de Maxime Colin. Plongez dans la vie sauvage à travers différentes thématiques.">
+    <meta property="og:image" content="https://phbasin.github.io/mc-portfolio/assets/gallery/vase-cou/cover.webp">
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="src/js/layout.js"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Fancybox -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+</head>
+
+<body
+    class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
+
+    <!-- Navbar -->
+    <header class="flex w-full overflow-hidden pt-10 pb-1" x-data x-html="window.headerHTML"></header>
+
+    <!-- Content -->
+    <div class="container mx-auto">
+        <h1 class="text-4xl pt-10 pb-8 font-bold">PORTFOLIO</h1>
+        <section class="text-neutral-700" x-data="portfolio">
+            <div class="container w-full">
+
+                <!-- Category Grid -->
+                <!-- Desktop: 3 cols, Tablet: 2 cols, Mobile: 1 col -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-10">
+                    <template x-for="category in categories" :key="category.id">
+                        <a :href="'gallery.html?id=' + category.id"
+                            class="group block relative overflow-hidden shadow-lg aspect-[4/3] bg-gray-100 dark:bg-neutral-900">
+
+                            <!-- Cover Image -->
+                            <img :src="category.cover" :alt="category.title"
+                                class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110 opacity-0 animate-fade-in"
+                                loading="lazy">
+
+                            <!-- Overlay (Mobile: Permanent, Desktop: Hover) -->
+                            <div
+                                class="absolute inset-0 bg-black/60 transition duration-300 flex opacity-100 md:opacity-0 md:group-hover:opacity-100 items-center justify-center">
+                                <h3 class="text-white text-xl md:text-2xl font-bold text-center px-4 drop-shadow-md"
+                                    x-text="category.title"></h3>
+                            </div>
+                        </a>
+                    </template>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer x-data x-html="window.footerHTML"></footer>
+    <script>
+        Fancybox.bind("[data-fancybox]", {});
+    </script>
+    <script src="src/js/categories.js"></script>
+    <script src="src/js/fade_in.js"></script>
+</body>
+
+</html>

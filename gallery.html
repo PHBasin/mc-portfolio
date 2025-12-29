@@ -43,7 +43,7 @@
     <header class="flex w-full overflow-hidden pt-10 pb-1" x-data x-html="window.headerHTML"></header>
 
     <!-- Content -->
-    <div class="container mx-auto">
+    <div class="container mx-auto pb-10">
 
         <!-- Header -->
         <div class="pt-10 pb-8 flex flex-col items-start gap-6">
@@ -55,7 +55,7 @@
                     class="w-5 h-5 transform group-hover:-translate-x-1 transition-transform duration-300">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
                 </svg>
-                <span class="text-lg font-medium">Retour</span>
+                <span class="text-lg font-medium">Retour au portfolio</span>
             </a>
 
             <!-- Title -->
@@ -74,7 +74,7 @@
         <!-- Use x-show on the whole section if category exists -->
         <section class="text-neutral-700" x-show="category">
             <div class="container w-full">
-                <div class="pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                     x-data="{ images: (window.galleryImages && window.galleryImages[catId]) || [] }">
                     <template x-for="image in images" :key="image">
                         <div class="overflow-hidden relative group">

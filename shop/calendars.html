@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maxime Colin - Calendriers</title>
+    <meta name="description" content="Achetez des calendriers.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <link rel="stylesheet" href="../dist/output.css" />
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="../src/js/layout.js"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body
+    class="dark:bg-black bg-white min-h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500 flex flex-col">
+
+    <!-- Navbar -->
+    <header class="flex w-full overflow-hidden pt-10 pb-1" x-data x-html="window.headerHTML"></header>
+
+    <!-- Content -->
+    <div class="container mx-auto pb-10">
+
+        <!-- Header -->
+        <div class="pt-10 pb-8 flex flex-col items-start gap-6">
+
+            <!-- Back Button -->
+            <a href="../shop.html"
+                class="group flex items-center gap-2 text-neutral-500 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor"
+                    class="w-5 h-5 transform group-hover:-translate-x-1 transition-transform duration-300">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                </svg>
+                <span class="text-lg font-medium">Retour à la boutique</span>
+            </a>
+
+            <!-- Title -->
+            <h1 class="text-4xl font-bold">CALENDRIERS</h1>
+
+            <div class="text-lg text-gray-600 dark:text-gray-300 font-medium space-y-6">
+                <p>Bientôt disponible.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer x-data x-html="window.footerHTML"></footer>
+    <script src="../src/js/fade_in.js"></script>
+</body>
+
+</html>

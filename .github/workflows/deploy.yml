@@ -18,10 +18,10 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
-      - name: Build
+      - name: Build CSS
         run: npm run build:css
-      - name: Generate gallery_images.js
-        run: node scripts/generate-gallery-manifest.js
+      - name: Generate Gallery Manifest
+        run: node scripts/generate-manifests.js
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

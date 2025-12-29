@@ -14,16 +14,21 @@ const headerHTML = `
                 </div>
             </button>
         </div>
-        <div id="menu" class="w-full transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center" :class="{ 'h-40': open, 'h-0': !open }">
+        <div id="menu" class="w-full transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center" :class="{ 'h-42': open, 'h-0': !open }">
             <ul id="ulMenu" class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
                 <li class="group transition duration-300">
-                    <a href="index.html" class="font-signika text-2xl tap-highlight-transparent">PORTFOLIO
-                        <span class="hidden md:block h-0.5 bg-black dark:bg-white transition-all duration-500" :class="window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/') ? 'max-w-full' : 'max-w-0 group-hover:max-w-full'"></span>
+                    <a href="portfolio.html" class="font-signika text-2xl tap-highlight-transparent">PORTFOLIO
+                        <span class="hidden md:block h-0.5 bg-black dark:bg-white transition-all duration-500" :class="window.location.pathname.endsWith('portfolio.html') ? 'max-w-full' : 'max-w-0 group-hover:max-w-full'"></span>
                     </a>
                 </li>
                 <li class="group transition duration-300">
                     <a href="awards.html" class="font-signika text-2xl tap-highlight-transparent">DISTINCTIONS
                         <span class="hidden md:block h-0.5 bg-black dark:bg-white transition-all duration-500" :class="window.location.pathname.endsWith('awards.html') ? 'max-w-full' : 'max-w-0 group-hover:max-w-full'"></span>
+                    </a>
+                </li>
+                <li class="group transition duration-300">
+                    <a href="shop.html" class="font-signika text-2xl tap-highlight-transparent">BOUTIQUE
+                        <span class="hidden md:block h-0.5 bg-black dark:bg-white transition-all duration-500" :class="window.location.pathname.endsWith('shop.html') ? 'max-w-full' : 'max-w-0 group-hover:max-w-full'"></span>
                     </a>
                 </li>
                 <li class="group transition duration-300">
