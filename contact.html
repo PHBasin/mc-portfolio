@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://maxime-colin.com/contact.html">
     <meta property="og:title" content="Contact - Maxime Colin">
     <meta property="og:description" content="Envoyez-moi un message pour toute demande ou collaboration.">
-    <meta property="og:image" content="https://phbasin.github.io/mc-portfolio/assets/gallery/vase-cou/cover.webp">
+    <meta property="og:image" content="https://maxime-colin.com/assets/gallery/voisins-originaux/cover.webp">
 
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -43,7 +43,8 @@
                 <div class="max-w-screen-md">
                     <h1 class="text-4xl pt-10 pb-8 font-bold">CONTACT</h1>
 
-                    <form class="space-y-8" action="mailto:pierre-henri.basin@orange.fr">
+                    <form class="space-y-8" x-data="{ subject: '', message: '' }"
+                        @submit.prevent="window.location.href = `mailto:pierre-henri.basin@orange.fr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`">
                         <div>
                             <label for="email" class="block mb-2 text-lg font-medium">Votre e-mail</label>
                             <input type="email" id="email"
@@ -52,13 +53,13 @@
                         </div>
                         <div>
                             <label for="subject" class="block mb-2 text-lg font-medium">Objet</label>
-                            <input type="text" id="subject"
+                            <input type="text" id="subject" x-model="subject"
                                 class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                                 placeholder="Comment puis-je vous aider ?" required />
                         </div>
                         <div class="sm:col-span-2">
                             <label for="message" class="block mb-2 text-lg font-medium">Votre message</label>
-                            <textarea id="message" rows="6"
+                            <textarea id="message" rows="6" x-model="message"
                                 class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                 placeholder="Votre message..." required></textarea>
                         </div>
