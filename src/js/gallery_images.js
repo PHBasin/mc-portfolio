@@ -351,7 +351,7 @@ window.galleryImages = {
         "15A8779.webp",
         "G15A1722.webp",
         "G15A1782.webp",
-        "G15A1793.webp",
+        "G15A1792.webp",
         "cover.webp"
     ],
     "tout-schuss": [
