@@ -16,6 +16,10 @@ const awards = [
         caption: "1er Prix Jeune - Festival de l'Oiseau et de la Nature 2024"
     },
     {
+        src: "assets/awards/18.webp",
+        caption: "Sélection Officielle - Concours Photos de Montier-en-Der 2025 (Catégorie Adulte)"
+    },
+    {
         src: "assets/awards/5.webp",
         caption: "Prix Homme et Nature - Concours Photos de Montier-en-Der 2021"
     },
@@ -82,10 +86,6 @@ const awards = [
     {
         src: "assets/awards/17.webp",
         caption: "Exposée dans le palmarès - Concours Photos de Rambouillet 2023"
-    },
-    {
-        src: "assets/awards/18.webp",
-        caption: "Sélection Officielle - Concours Photos de Montier-en-Der 2025 (Catégorie Adulte)"
     }
 ];
 
