@@ -92,6 +92,16 @@ const categoriesData = [
         ]
     },
     {
+        id: 'terre-est',
+        title: "Terre de l'est",
+        cover: "assets/gallery/terre-est/cover.webp",
+        description: [
+            "L'Est est pour moi comme une seconde maison, un second berceau. C'est là, entre la Franche-Comté et la Lorraine, que j'ai fait mes premiers débuts en photographie animalière. Ces territoires ont marqué mon parcours et continuent encore aujourd'hui d'influencer mon travail.",
+            "Depuis que j'étudie à Nancy, j'ai l'occasion d'y passer davantage de temps. Cela me permet de parcourir cette région aux paysages variés, entre grandes plaines, plateaux, vallées et crêtes.Chaque sortie est différente, et les occasions d'observer la faune y sont nombreuses.",
+            "Ces espaces offrent aussi la possibilité de rechercher des espèces emblématiques et parfois rares, comme le grand - duc d'Europe, le faucon pèlerin, le lynx, et bien d'autres encore.Terres de l'Est rassemble ces images, réalisées au fil des saisons, dans une région qui m'est profondément familière."
+        ]
+    },
+    {
         id: 'tout-schuss',
         title: "Tout schuss",
         cover: "assets/gallery/tout-schuss/cover.webp",

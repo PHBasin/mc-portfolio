@@ -20,6 +20,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build:css
+      - name: Generate gallery_images.js
+        run: node scripts/generate-gallery-manifest.js
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
