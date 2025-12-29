@@ -26,7 +26,14 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'" />
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet" />
+    </noscript>
+
+    <!-- LCP Optimization: Preload First Slider Image -->
+    <link rel="preload" as="image" href="assets/slider/1.webp" fetchpriority="high" />
 </head>
 
 <body
@@ -44,7 +51,8 @@
             <template x-for="(slide, index) in slides" :key="index">
                 <div class="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out"
                     :class="currentSlide === index ? 'opacity-100' : 'opacity-0'">
-                    <img :src="slide.img" :alt="slide.alt" class="w-full h-full object-cover">
+                    <img :src="slide.img" :alt="slide.alt" class="w-full h-full object-cover"
+                        :loading="index === 0 ? 'eager' : 'lazy'" :fetchpriority="index === 0 ? 'high' : 'auto'">
 
                     <!-- Optional Caption Overlay -->
                     <div
