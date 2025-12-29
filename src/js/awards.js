@@ -1,83 +1,91 @@
 const awards = [
     {
-        src: "https://picsum.photos/seed/award1/1200/800",
+        src: "assets/awards/1.webp",
         caption: "Highly Commended - Wildlife Photographer of the Year 2024 (Catégorie Jeune)"
     },
     {
-        src: "https://picsum.photos/seed/award2/800/1200",
+        src: "assets/awards/2.webp",
         caption: "Highly Commended - Nature's Best Photography 2024"
     },
     {
-        src: "https://picsum.photos/seed/award3/1200/800",
+        src: "assets/awards/3.webp",
         caption: "Prix du Public - Festival Photo Nature de Namur 2023"
     },
     {
-        src: "https://picsum.photos/seed/award4/1200/800",
+        src: "assets/awards/4.webp",
         caption: "1er Prix Jeune - Festival de l'Oiseau et de la Nature 2024"
     },
     {
-        src: "https://picsum.photos/seed/award5/1200/800",
-        caption: "Prix Homme et Nature - Festival Photo Montier-en-Der 2021"
+        src: "assets/awards/5.webp",
+        caption: "Prix Homme et Nature - Concours Photos de Montier-en-Der 2021"
     },
     {
-        src: "https://picsum.photos/seed/award6/1200/800",
-        caption: "Prix Séquence Image Fixe - Festival Photo Montier-en-Der 2021"
+        src: "assets/awards/6-1.webp",
+        caption: "Prix Séquence Image Fixe - Concours Photos de Montier-en-Der 2021"
     },
     {
-        src: "https://picsum.photos/seed/award7/800/1200",
-        caption: "Prix Nature Revisitée - Festival Photo Montier-en-Der 2021"
+        src: "assets/awards/6-2.webp",
+        caption: "Prix Séquence Image Fixe - Concours Photos de Montier-en-Der 2021"
     },
     {
-        src: "https://picsum.photos/seed/award8/1200/800",
+        src: "assets/awards/6-3.webp",
+        caption: "Prix Séquence Image Fixe - Concours Photos de Montier-en-Der 2021"
+    },
+    {
+        src: "assets/awards/6-4.webp",
+        caption: "Prix Séquence Image Fixe - Concours Photos de Montier-en-Der 2021"
+    },
+    {
+        src: "assets/awards/6-5.webp",
+        caption: "Prix Séquence Image Fixe - Concours Photos de Montier-en-Der 2021"
+    },
+    {
+        src: "assets/awards/7.webp",
+        caption: "Prix Nature Revisitée - Concours Photos de Montier-en-Der 2021"
+    },
+    {
+        src: "assets/awards/8.webp",
         caption: "Sélection Officielle - Concours Photos de Namur 2024"
     },
     {
-        src: "https://picsum.photos/seed/award9/1200/800",
+        src: "assets/awards/9.webp",
         caption: "3ème Prix - Festival Photo de Rambouillet 2023"
     },
     {
-        src: "https://picsum.photos/seed/award10/1200/800",
-        caption: "Finaliste - Concours Photos de Rambouillet 2023"
+        src: "assets/awards/10.webp",
+        caption: "Exposée dans le palmarès - Concours Photos de Rambouillet 2023"
     },
     {
-        src: "https://picsum.photos/seed/award11/800/1200",
-        caption: "Finaliste - Concours Photos de Montier-en-Der 2021"
+        src: "assets/awards/11.webp",
+        caption: "Exposée dans le palmarès - Concours Photos de Montier-en-Der 2021, Festival de l'Oiseau 2022 et Concours Photos de Rambouillet 2023"
     },
     {
-        src: "https://picsum.photos/seed/award12/1200/800",
-        caption: "Finaliste - Festival de l'Oiseau et de la Nature 2022"
+        src: "assets/awards/12.webp",
+        caption: "Exposée dans le palmarès - Concours Photos de Montier-en-Der 2021"
     },
     {
-        src: "https://picsum.photos/seed/award13/1200/800",
-        caption: "Finaliste - Concours Photos de Rambouillet 2023"
+        src: "assets/awards/13.webp",
+        caption: "Exposée dans le palmarès - Concours Photos Émotion Ailes 2024"
     },
     {
-        src: "https://picsum.photos/seed/award14/1200/800",
-        caption: "Finaliste - Concours Photos de Montier-en-Der 2021"
+        src: "assets/awards/14.webp",
+        caption: "Exposée dans le palmarès - Concours Photos Émotion Ailes 2024"
     },
     {
-        src: "https://picsum.photos/seed/award15/1200/800",
-        caption: "Finaliste - Concours Photos Émotion Ailes 2024"
+        src: "assets/awards/15.webp",
+        caption: "Exposée dans le palmarès - Festival de l'Oiseau 2022"
     },
     {
-        src: "https://picsum.photos/seed/award16/800/1200",
-        caption: "Finaliste - Concours Photos Émotion Ailes 2024"
+        src: "assets/awards/16.webp",
+        caption: "Exposée dans le palmarès - Concours Photos de Rambouillet 2021"
     },
     {
-        src: "https://picsum.photos/seed/award17/1200/800",
-        caption: "Finaliste - Festival de l'Oiseau et de la Nature 2022"
+        src: "assets/awards/17.webp",
+        caption: "Exposée dans le palmarès - Concours Photos de Rambouillet 2023"
     },
     {
-        src: "https://picsum.photos/seed/award18/1200/800",
-        caption: "Finaliste - Concours Photos de Rambouillet 2021"
-    },
-    {
-        src: "https://picsum.photos/seed/award19/1200/800",
-        caption: "Finaliste - Concours Photos de Rambouillet 2023"
-    },
-    {
-        src: "https://picsum.photos/seed/award20/1200/800",
-        caption: "Sélection Officielle - Concours de Montier-en-Der 2025 (Catégorie Adulte)"
+        src: "assets/awards/18.webp",
+        caption: "Sélection Officielle - Concours Photos de Montier-en-Der 2025 (Catégorie Adulte)"
     }
 ];
 

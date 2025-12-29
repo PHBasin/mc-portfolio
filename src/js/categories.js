@@ -10,22 +10,13 @@ const categoriesData = [
         ]
     },
     {
-        id: 'tabarnak',
-        title: "Tabarnak !!",
-        cover: "assets/gallery/tabarnak/cover.webp",
+        id: 'belle-region',
+        title: "Ma belle région",
+        cover: "assets/gallery/belle-region/cover.webp",
         description: [
-            "Le Canada fait rêver bien des naturalistes par ses paysages infinis, où la nature reprend ses droits et où l'empreinte humaine se fait plus discrète. Ici, la faune évolue dans des espaces immenses, offrant des rencontres privilégiées avec des animaux souvent bien moins craintifs qu'en France.",
-            "Cependant, certains habitants des forêts boréales et des montagnes restent de véritables fantômes, leur discrétion forgée par des siècles de méfiance, que ce soit face au tourisme ou à la chasse. Chaque observation devient alors un privilège, un instant suspendu où l'on mesure toute la richesse et la fragilité de cette nature sauvage.",
-            "À travers ces images, je cherche à retranscrire la magie de ces terres lointaines, où l'homme n'est qu'un simple spectateur face à l'immensité du monde animal."
-        ]
-    },
-    {
-        id: 'pays-reblochon',
-        title: "Au pays du Reblochon",
-        cover: "assets/gallery/pays-reblochon/cover.webp",
-        description: [
-            "Au cœur des Alpes, là où les cimes tutoient le ciel, une faune robuste et fascinante s'est adaptée aux conditions extrêmes. Parmi ces montagnards aguerris, le bouquetin règne en maître, évoluant avec une aisance déconcertante sur les parois escarpées. À ses côtés, d'autres habitants emblématiques peuplent ces paysages grandioses : chamois, marmottes, lagopèdes et bien d'autres encore, chacun incarnant à sa manière la rudesse et la beauté de cet écosystème d'altitude.",
-            "Capturer ces instants, c'est témoigner d'un monde où l'homme n'est qu'un visiteur, éphémère face à l'immensité des montagnes. Dans la lumière dorée du matin ou sous le manteau brumeux des sommets, chaque rencontre devient un moment suspendu, une immersion au cœur de la vie sauvage alpine."
+            "Les Yvelines, cet écrin de nature niché entre Paris et Rambouillet, abritent une faune riche et surprenante. Forêts profondes, plaines vallonnées, rivières discrètes et étangs paisibles composent ce territoire où la vie sauvage trouve refuge, parfois aux portes des villes.",
+            "Ici, la cohabitation entre l'homme et l'animal est une réalité quotidienne. Au détour de sentiers forestiers ou dans une petite prairie, il suffit souvent d'un peu de patience et de discrétion pour assister à des rencontres inoubliables : une chevrette mettant bas dans un petit carré de prairie, ou encore un terrier de renard grouillant de vie à l'abri des regards, ou même une chouette lançant ses plus belles vocalises sur le haut d'une cheminée.",
+            "Au fil des saisons, la nature des Yvelines se transforme et dévoile de nouveaux visages. Du brâme du cerf résonnant à l'automne aux premières lueurs printanières illuminant l'entrée des terriers de renard. Chaque instant est une invitation à l'observation et à la contemplation."
         ]
     },
     {
@@ -36,6 +27,16 @@ const categoriesData = [
             "À la fin de l'été, tandis que certains laissent la mélancolie du froid envahir leurs pensées, moi, je me laisse emporter par l'excitation de retrouver ces lieux où l'automne, avec toute sa magie, s'annonce. La forêt, alors, semble s'éveiller une dernière fois avant de sombrer dans le silence, comme un souffle suspendu dans l'air frais.",
             "Les brames des cerfs, puissants et étranges, vibrent à travers les arbres, éclatant comme un cri du cœur, un chant d'amour sans fin. Ce cri résonne dans le vent, un appel profond et mystérieux, empli de la force et de la bea uté de la nature. Les biches, écoutant l'écho de cet appel, s'avancent lentement dans la lumière bleutée du lever du jour, se regroupant en harde, autour desquelles les rois de la forêt et les petits princes gravitent.",
             "Et alors, tel un chef d'orchestre invisible, le cerf lance son symphonique brame, marquant le début d'un spectacle à la fois intime et grandiose, magnifié par une brume légère qui danse autour des silhouettes, ajoutant une touche de mystère et de rêve à cette scène intemporelle."
+        ]
+    },
+    {
+        id: 'terre-est',
+        title: "Terre de l'est",
+        cover: "assets/gallery/terre-est/cover.webp",
+        description: [
+            "L'Est est pour moi comme une seconde maison, un second berceau. C'est là, entre la Franche-Comté et la Lorraine, que j'ai fait mes premiers débuts en photographie animalière. Ces territoires ont marqué mon parcours et continuent encore aujourd'hui d'influencer mon travail.",
+            "Depuis que j'étudie à Nancy, j'ai l'occasion d'y passer davantage de temps. Cela me permet de parcourir cette région aux paysages variés, entre grandes plaines, plateaux, vallées et crêtes.Chaque sortie est différente, et les occasions d'observer la faune y sont nombreuses.",
+            "Ces espaces offrent aussi la possibilité de rechercher des espèces emblématiques et parfois rares, comme le grand - duc d'Europe, le faucon pèlerin, le lynx, et bien d'autres encore.Terres de l'Est rassemble ces images, réalisées au fil des saisons, dans une région qui m'est profondément familière."
         ]
     },
     {
@@ -62,16 +63,6 @@ const categoriesData = [
         ]
     },
     {
-        id: 'belle-region',
-        title: "Ma belle région",
-        cover: "assets/gallery/belle-region/cover.webp",
-        description: [
-            "Les Yvelines, cet écrin de nature niché entre Paris et Rambouillet, abritent une faune riche et surprenante. Forêts profondes, plaines vallonnées, rivières discrètes et étangs paisibles composent ce territoire où la vie sauvage trouve refuge, parfois aux portes des villes.",
-            "Ici, la cohabitation entre l'homme et l'animal est une réalité quotidienne. Au détour de sentiers forestiers ou dans une petite prairie, il suffit souvent d'un peu de patience et de discrétion pour assister à des rencontres inoubliables : une chevrette mettant bas dans un petit carré de prairie, ou encore un terrier de renard grouillant de vie à l'abri des regards, ou même une chouette lançant ses plus belles vocalises sur le haut d'une cheminée.",
-            "Au fil des saisons, la nature des Yvelines se transforme et dévoile de nouveaux visages. Du brâme du cerf résonnant à l'automne aux premières lueurs printanières illuminant l'entrée des terriers de renard. Chaque instant est une invitation à l'observation et à la contemplation."
-        ]
-    },
-    {
         id: 'rer-nard',
         title: "RER-nard",
         cover: "assets/gallery/rer-nard/cover.webp",
@@ -79,26 +70,6 @@ const categoriesData = [
             "On dit souvent que le renard est un opportuniste, capable de s'adapter aux environnements les plus inattendus. Pourtant, au début du printemps, j'ai été plus qu'étonné lorsque mon ami Richard m'a appelé pour me dire qu'il venait d'apercevoir un renardeau… depuis la fenêtre de son RER.",
             "Ni une ni deux, l'excitation a pris le dessus, et malgré quelques absences en cours, je me suis empressé d'aller voir ça de mes propres yeux. Ce que j'ai découvert dépassait tout ce que j'aurais pu imaginer : au cœur de la ville, le long des rails, un couple de renards avait élu domicile et élevait sa progéniture. Là, entre le vacarme des trains et l'indifférence des passants, la vie sauvage suivait son cours, discrète et résiliente.",
             "Mais la ville est un terrain impitoyable pour ces petites âmes. Sur les trois renardeaux, un seul aura survécu, luttant contre un monde où rien ne semble fait pour eux. Pourtant, même dans cet environnement hostile, ces renards ont su prouver une fois de plus leur incroyable capacité à s'adapter, rappelant que la nature trouve toujours un moyen, même là où on l'attend le moins."
-        ]
-    },
-    {
-        id: 'god-save-cerf',
-        title: "God Save the « Cerf »",
-        cover: "assets/gallery/god-save-cerf/cover.webp",
-        description: [
-            "À l'occasion de la remise des prix du Wildlife Photographer of the Year en automne 2024, j'ai eu l'opportunité de m'aventurer à Londres. Ce voyage m'a permis de découvrir Richmond Park, un véritable écrin de nature où les cerfs, en nombre impressionnant, évoluent avec une majesté rare. Là-bas, loin de toute crainte humaine, ils se montrent avec une étonnante sérénité, offrant aux observateurs des instants d'intimité privilégiés.",
-            "L'automne, saison de la métamorphose, est également celui du brame du cerf. Un son profond, vibrant, qui résonne à travers la forêt, tel un chant ancestral. C'est un spectacle fascinant, où l'on peut percevoir la lutte silencieuse de ces animaux majestueux, leurs rivalités, leurs appels… des comportements qu'il est difficile de saisir ailleurs, dans la nature sauvage. Richmond Park devient alors un théâtre vivant, où chaque instant passé parmi eux devient un précieux souvenir.",
-            "Ce parc, véritable havre de paix, offre aussi une lumière douce, filtrée par les feuillages des arbres, créant des jeux d'ombres et de lumière. Le paysage se transforme sous les couleurs d'automne, et chaque coin semble raconter une histoire. Là, dans ce décor d'une beauté envoûtante, j'ai pu capturer des moments suspendus et m'imprégner de la beauté discrète de ces cerfs, dont la présence silencieuse dans la nature est à la fois un mystère et un privilège."
-        ]
-    },
-    {
-        id: 'terre-est',
-        title: "Terre de l'est",
-        cover: "assets/gallery/terre-est/cover.webp",
-        description: [
-            "L'Est est pour moi comme une seconde maison, un second berceau. C'est là, entre la Franche-Comté et la Lorraine, que j'ai fait mes premiers débuts en photographie animalière. Ces territoires ont marqué mon parcours et continuent encore aujourd'hui d'influencer mon travail.",
-            "Depuis que j'étudie à Nancy, j'ai l'occasion d'y passer davantage de temps. Cela me permet de parcourir cette région aux paysages variés, entre grandes plaines, plateaux, vallées et crêtes.Chaque sortie est différente, et les occasions d'observer la faune y sont nombreuses.",
-            "Ces espaces offrent aussi la possibilité de rechercher des espèces emblématiques et parfois rares, comme le grand - duc d'Europe, le faucon pèlerin, le lynx, et bien d'autres encore.Terres de l'Est rassemble ces images, réalisées au fil des saisons, dans une région qui m'est profondément familière."
         ]
     },
     {
@@ -111,6 +82,35 @@ const categoriesData = [
             "Dans cette atmosphère silencieuse, où seuls résonnent les craquements de la neige sous leurs pas, ces apparitions furtives offrent des instants magiques. Mais pour les entrevoir, il faut parfois se faufiler entre les dameuses, glisser discrètement à travers l'obscurité et savoir observer, patiemment, ce ballet nocturne que peu ont la chance d'apercevoir."
         ]
     },
+    {
+        id: 'tabarnak',
+        title: "Tabarnak !!",
+        cover: "assets/gallery/tabarnak/cover.webp",
+        description: [
+            "Le Canada fait rêver bien des naturalistes par ses paysages infinis, où la nature reprend ses droits et où l'empreinte humaine se fait plus discrète. Ici, la faune évolue dans des espaces immenses, offrant des rencontres privilégiées avec des animaux souvent bien moins craintifs qu'en France.",
+            "Cependant, certains habitants des forêts boréales et des montagnes restent de véritables fantômes, leur discrétion forgée par des siècles de méfiance, que ce soit face au tourisme ou à la chasse. Chaque observation devient alors un privilège, un instant suspendu où l'on mesure toute la richesse et la fragilité de cette nature sauvage.",
+            "À travers ces images, je cherche à retranscrire la magie de ces terres lointaines, où l'homme n'est qu'un simple spectateur face à l'immensité du monde animal."
+        ]
+    },
+    {
+        id: 'pays-reblochon',
+        title: "Au pays du Reblochon",
+        cover: "assets/gallery/pays-reblochon/cover.webp",
+        description: [
+            "Au cœur des Alpes, là où les cimes tutoient le ciel, une faune robuste et fascinante s'est adaptée aux conditions extrêmes. Parmi ces montagnards aguerris, le bouquetin règne en maître, évoluant avec une aisance déconcertante sur les parois escarpées. À ses côtés, d'autres habitants emblématiques peuplent ces paysages grandioses : chamois, marmottes, lagopèdes et bien d'autres encore, chacun incarnant à sa manière la rudesse et la beauté de cet écosystème d'altitude.",
+            "Capturer ces instants, c'est témoigner d'un monde où l'homme n'est qu'un visiteur, éphémère face à l'immensité des montagnes. Dans la lumière dorée du matin ou sous le manteau brumeux des sommets, chaque rencontre devient un moment suspendu, une immersion au cœur de la vie sauvage alpine."
+        ]
+    },
+    {
+        id: 'god-save-cerf',
+        title: "God Save the « Cerf »",
+        cover: "assets/gallery/god-save-cerf/cover.webp",
+        description: [
+            "À l'occasion de la remise des prix du Wildlife Photographer of the Year en automne 2024, j'ai eu l'opportunité de m'aventurer à Londres. Ce voyage m'a permis de découvrir Richmond Park, un véritable écrin de nature où les cerfs, en nombre impressionnant, évoluent avec une majesté rare. Là-bas, loin de toute crainte humaine, ils se montrent avec une étonnante sérénité, offrant aux observateurs des instants d'intimité privilégiés.",
+            "L'automne, saison de la métamorphose, est également celui du brame du cerf. Un son profond, vibrant, qui résonne à travers la forêt, tel un chant ancestral. C'est un spectacle fascinant, où l'on peut percevoir la lutte silencieuse de ces animaux majestueux, leurs rivalités, leurs appels… des comportements qu'il est difficile de saisir ailleurs, dans la nature sauvage. Richmond Park devient alors un théâtre vivant, où chaque instant passé parmi eux devient un précieux souvenir.",
+            "Ce parc, véritable havre de paix, offre aussi une lumière douce, filtrée par les feuillages des arbres, créant des jeux d'ombres et de lumière. Le paysage se transforme sous les couleurs d'automne, et chaque coin semble raconter une histoire. Là, dans ce décor d'une beauté envoûtante, j'ai pu capturer des moments suspendus et m'imprégner de la beauté discrète de ces cerfs, dont la présence silencieuse dans la nature est à la fois un mystère et un privilège."
+        ]
+    }
 ];
 
 window.categories = categoriesData;

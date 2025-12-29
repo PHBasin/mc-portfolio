@@ -4,6 +4,8 @@
 ![Build](https://img.shields.io/badge/Build-Passing-brightgreen?style=flat-square)
 ![Tech](https://img.shields.io/badge/Stack-HTML%20%7C%20Tailwind%20%7C%20AlpineJS-blue?style=flat-square)
 
+### 🌍 **[Access Live Website](https://phbasin.github.io/mc-portfolio/)**
+
 A high-performance static portfolio built for speed and simplicity.
 
 ---

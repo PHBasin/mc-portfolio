@@ -22,7 +22,7 @@ const headerHTML = `
                     </a>
                 </li>
                 <li class="group transition duration-300">
-                    <a href="awards.html" class="font-signika text-2xl tap-highlight-transparent">PALMARES
+                    <a href="awards.html" class="font-signika text-2xl tap-highlight-transparent">DISTINCTIONS
                         <span class="hidden md:block h-0.5 bg-black dark:bg-white transition-all duration-500" :class="window.location.pathname.endsWith('awards.html') ? 'max-w-full' : 'max-w-0 group-hover:max-w-full'"></span>
                     </a>
                 </li>
@@ -43,7 +43,7 @@ const headerHTML = `
 `;
 
 const footerHTML = `
-<div class="max-w-screen-xl py-8 md:py-16 mx-auto">
+<div class="max-w-screen-xl py-16 mx-auto">
     <div class="grid grid-cols-1 gap-8 text-center mx-auto">
         <div>
             <p class="font-signika"><b>MAXIME</b></p>
