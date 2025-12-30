@@ -48,6 +48,17 @@
 
         <!-- Fullscreen Slider -->
         <div class="relative w-full aspect-video overflow-hidden" x-data="slider()">
+
+            <!-- STATIC LCP IMAGE: Eliminates 5s render delay by showing image before JS loads -->
+            <div class="absolute inset-0 w-full h-full" x-init="$el.remove()">
+                <img src="assets/slider/1.webp" alt="photo 1" class="w-full h-full object-cover" loading="eager"
+                    fetchpriority="high">
+                <div
+                    class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/70 to-transparent text-white opacity-0 hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-xl font-signika font-bold tracking-wide">première image du slider</p>
+                </div>
+            </div>
+
             <template x-for="(slide, index) in slides" :key="index">
                 <div class="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out"
                     :class="currentSlide === index ? 'opacity-100' : 'opacity-0'">
