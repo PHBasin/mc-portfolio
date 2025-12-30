@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://maxime-colin.com/sitemap.xml
+Sitemap: https://phbasin.github.io/mc-portfolio/sitemap.xml
