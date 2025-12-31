@@ -48,7 +48,7 @@
     <header class="flex w-full overflow-hidden pt-10 pb-1" x-data x-html="window.headerHTML"></header>
 
     <!-- Content -->
-    <div class="container mx-auto pb-10">
+    <div class="container mx-auto pb-8">
         <h1 class="text-4xl pt-10 pb-8 font-bold">DISTINCTIONS</h1>
 
         <div x-data="awards" class="flex flex-col gap-8">
@@ -57,10 +57,10 @@
                     <a :href="award.src" data-fancybox="awards" :data-caption="award.caption"
                         class="block w-full max-w-4xl shadow-lg hover:opacity-95 transition">
                         <img :src="award.src" :alt="award.caption"
-                            class="w-full h-auto md:max-h-[80vh] object-contain mx-auto"
+                            class="w-full h-auto md:max-h-[90vh] object-contain mx-auto"
                             :loading="index < 2 ? 'eager' : 'lazy'">
                     </a>
-                    <p class="block mt-2 text-lg font-medium text-center" x-text="award.caption">
+                    <p class="block mt-2 mb-2 text-lg font-medium text-center" x-text="award.caption">
                     </p>
                 </div>
             </template>
