@@ -1,10 +1,10 @@
 const headerHTML = `
-<nav id="nav" x-data="{ open: false }" @resize.window="if (window.innerWidth > 640) open = false" role="navigation" class="w-full">
-    <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
-        <div class="mr-4 md:mr-8">
+<nav id="nav" x-data="{ open: false }" @resize.window="if (window.innerWidth > 1024) open = false" role="navigation" class="w-full">
+    <div class="container mx-auto flex flex-wrap items-center lg:flex-no-wrap">
+        <div class="mr-4 lg:mr-7">
             <a href="index.html" class="text-2xl font-signika font-bold">MAXIME COLIN</a>
         </div>
-        <div class="ml-auto md:hidden flex items-center justify-start">
+        <div class="ml-auto lg:hidden flex items-center justify-start">
             <button @click="open = !open" class="tap-highlight-transparent text-black dark:text-white w-5 h-5 relative focus:outline-none">
                 <span class="sr-only">Open main menu</span>
                 <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -14,31 +14,31 @@ const headerHTML = `
                 </div>
             </button>
         </div>
-        <div id="menu" class="w-full transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center" :class="{ 'h-42': open, 'h-0': !open }">
-            <ul id="ulMenu" class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
+        <div id="menu" class="w-full transition-all ease-out duration-500 lg:transition-none lg:w-auto lg:flex-grow lg:flex lg:items-center" :class="{ 'h-42': open, 'h-0': !open }">
+            <ul id="ulMenu" class="flex flex-col duration-300 ease-out lg:space-x-5 sm:transition-none mt-5 lg:flex-row lg:items-center lg:ml-auto lg:mt-0 lg:pt-0 lg:border-0">
                 <li class="group transition duration-300">
                     <a href="portfolio.html" class="font-signika text-2xl tap-highlight-transparent">PORTFOLIO
-                        <span class="hidden md:block h-0.5 bg-black dark:bg-white transition-all duration-500" :class="window.location.pathname.endsWith('portfolio.html') ? 'max-w-full' : 'max-w-0 group-hover:max-w-full'"></span>
+                        <span class="hidden lg:block h-0.5 bg-black dark:bg-white transition-all duration-500" :class="window.location.pathname.endsWith('portfolio.html') ? 'max-w-full' : 'max-w-0 group-hover:max-w-full'"></span>
                     </a>
                 </li>
                 <li class="group transition duration-300">
                     <a href="awards.html" class="font-signika text-2xl tap-highlight-transparent">DISTINCTIONS
-                        <span class="hidden md:block h-0.5 bg-black dark:bg-white transition-all duration-500" :class="window.location.pathname.endsWith('awards.html') ? 'max-w-full' : 'max-w-0 group-hover:max-w-full'"></span>
+                        <span class="hidden lg:block h-0.5 bg-black dark:bg-white transition-all duration-500" :class="window.location.pathname.endsWith('awards.html') ? 'max-w-full' : 'max-w-0 group-hover:max-w-full'"></span>
                     </a>
                 </li>
                 <li class="group transition duration-300">
                     <a href="shop.html" class="font-signika text-2xl tap-highlight-transparent">BOUTIQUE
-                        <span class="hidden md:block h-0.5 bg-black dark:bg-white transition-all duration-500" :class="window.location.pathname.endsWith('shop.html') ? 'max-w-full' : 'max-w-0 group-hover:max-w-full'"></span>
+                        <span class="hidden lg:block h-0.5 bg-black dark:bg-white transition-all duration-500" :class="window.location.pathname.endsWith('shop.html') ? 'max-w-full' : 'max-w-0 group-hover:max-w-full'"></span>
                     </a>
                 </li>
                 <li class="group transition duration-300">
                     <a href="about.html" class="font-signika text-2xl tap-highlight-transparent">A PROPOS
-                        <span class="hidden md:block h-0.5 bg-black dark:bg-white transition-all duration-500" :class="window.location.pathname.endsWith('about.html') ? 'max-w-full' : 'max-w-0 group-hover:max-w-full'"></span>
+                        <span class="hidden lg:block h-0.5 bg-black dark:bg-white transition-all duration-500" :class="window.location.pathname.endsWith('about.html') ? 'max-w-full' : 'max-w-0 group-hover:max-w-full'"></span>
                     </a>
                 </li>
                 <li class="group transition duration-300">
                     <a href="contact.html" class="font-signika text-2xl tap-highlight-transparent">CONTACT
-                        <span class="hidden md:block h-0.5 bg-black dark:bg-white transition-all duration-500" :class="window.location.pathname.endsWith('contact.html') ? 'max-w-full' : 'max-w-0 group-hover:max-w-full'"></span>
+                        <span class="hidden lg:block h-0.5 bg-black dark:bg-white transition-all duration-500" :class="window.location.pathname.endsWith('contact.html') ? 'max-w-full' : 'max-w-0 group-hover:max-w-full'"></span>
                     </a>
                 </li>
             </ul>
